@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Syncloud</title>
+    <!-- CSS Style -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Favicon Style -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon_io/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./favicon_io/site.webmanifest" />
+    <!-- Font style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome style -->
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <nav class="top-nav">
+      <div class="logo">Syncloud</div>
+      <ul class="navlist">
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#" class="trial-btn"> Start Free Trial</a></li>
+      </ul>
+      <!-- Hamburger menu -->
+      <div class="menu-toggle">&#9776;</div>
+    </nav>
+
+    <section class="big-banner">
+      <h1>
+        Cloud Storage That Scales <br />
+        With Your Team
+      </h1>
+      <p>
+        Secure, fast, and intelligent file management for modern teams. <br />
+        Collaborate seamlessly across your organization.
+      </p>
+      <a href="#">Get Started Free</a>
+    </section>
+
+    <section class="prod-intro-section">
+      <h2>Everything You Need To Succeed</h2>
+      <p>
+        powerful features to streamline your workflow and boost productivity
+      </p>
+      <div class="intro-container">
+        <div class="intro">
+          <div class="intro-inner">
+            <div class="feature-img">
+              <h1>🔓</h1>
+            </div>
+            <h3>Enterprise-Grade Security</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore,
+              praesentium? Similique ad.
+            </p>
+
+            <ul>
+              <li>
+                <i class="fa-solid fa-check" style="color: #428a51"></i>256-bit
+                AES encryption
+              </li>
+              <li>Two-factor authentication</li>
+              <li>Regular Security audits</li>
+            </ul>
+          </div>
+        </div>
+        <div class="intro">
+          <div class="intro-inner">
+            <div class="feature-img">
+              <h1>🤝</h1>
+            </div>
+            <h3>Real-time Collaboration</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore,
+              praesentium? Similique ad quisquam reprehenderit pariatur odio.
+            </p>
+
+            <ul>
+              <li>Live document editing</li>
+              <li>Version and controll rollback</li>
+              <li>Team activity tracking</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="small-intro">
+        <div class="small-inner">
+          <h1>&#x1F680;</h1>
+          <!--rocket hex code-->
+          <b>Lightning Fast</b>
+          <p>Upload and access files instantly with our global CDN network.</p>
+        </div>
+        <div class="small-inner">
+          <h1>&#x1F4CA;</h1>
+          <!--analytics hex code-->
+          <b>Advanced Analytics</b>
+          <p>
+            Track usage patterns and optimize your workflow with detailed
+            insights.
+          </p>
+        </div>
+        <div class="small-inner">
+          <h1>&#x1F504;</h1>
+          <!--repeat hex code-->
+          <b>Smart Sync</b>
+          <p>Automatic syncing across all devices with conflict resolution.</p>
+        </div>
+        <div class="small-inner">
+          <h1>&#x1F310;</h1>
+          <!--website hex code-->
+          <b>API Integration</b>
+          <p>Connect with 1000+ apps through our powerful REST API.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing-div">
+      <h1>Pricing That Grows With You</h1>
+      <p>Calculate your perfect plan based on your team size and storage needs</p>
+      <div class="price-range-container">
+              <div class="price-range">
+                <div class="range-text">
+                           <span>Team Member</span>
+                <span class="team-number">5</span>
+                </div>
+                <div class="range-slider">
+                <input type="range" min="1" max="100" value="5" name="Team-range" class="team-slider ttt" />
+</div>
+                <div class="range-text">
+                           <span>Storage (GB) </span>
+                <span class="team-number">500 </span>
+                </div>
+                <div class="range-slider">
+                <input type="range" min="100" max="1500" value="500" step="100" name="Storage-range" class="team-slider" />
+                </div>
+              </div>
+
+              
+              </div>
+              
+
+      </div>
+
+    </section>
+
+    <script>
+      const menuToggle = document.querySelector(".menu-toggle");
+      const navLinks = document.querySelector(".navlist");
+
+      menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+
+      // Select all sliders and numbers
+document.querySelectorAll('.range-slider').forEach(function(sliderDiv) {
+  const slider = sliderDiv.querySelector('.team-slider');
+  // Find the .team-number and .unit in the previous sibling (.range-text)
+  const rangeText = sliderDiv.previousElementSibling;
+  const number = rangeText.querySelector('.team-number');
+  const unit = rangeText.querySelector('.unit');
+  slider.addEventListener('input', function() {
+    number.textContent = slider.value;
+    // Optionally, you can set unit.textContent = 'GB'; if you want to ensure it always says GB
+  });
+});
+    </script>
+  </body>
+</html>
