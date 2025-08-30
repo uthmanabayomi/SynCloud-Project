@@ -7,6 +7,8 @@ body {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+  overflow-x: hidden;
+  overflow-wrap: break-word;
 }
 
 .top-nav {
@@ -18,6 +20,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 1000;
 }
 
 .navlist {
@@ -584,3 +587,128 @@ body {
     margin-bottom: 20px;
   }
 }
+
+.testimony{
+  width: 100%;
+  background-color: rgb(41, 58, 80);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.testimony > h1{
+  color: rgb(221, 229, 236);
+  text-align: center;
+  padding-top: 2em;
+  font-family: "sans serif","sans-serif";
+  font-size: 2.5em;
+
+}
+
+.testimony p {
+  color: rgb(138, 209, 221);
+  text-align: center;
+  line-height: 1;
+}
+
+.small-testimony-container{
+  width: 100%;
+  display: flex;
+  /* flex-direction: column; */
+  /* gap: 8px;  */
+  justify-content: space-around;
+  align-items: center;
+}
+
+.small-testimony{
+  width: 20%;
+  height: 10em;
+  background-color: rgb(28, 45, 68);
+  
+    border-radius: 12px;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.small-testimony h1{
+ background: linear-gradient(
+    to right,
+    rgba(75, 181, 230, 0.336),
+    rgb(66, 240, 196)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;  text-align: center;
+  font-family: "sans serif","sans-serif";
+  font-size: 2.5em;
+}
+
+.testimony-text{
+  width: 60%;
+  height: fit-content;
+  padding: 2rem 0 2em 0;
+  font-size: 1em;
+}
+
+.testimony-text p{
+  text-align: left;
+  line-height: 2;
+}
+
+@media(max-width:768px){
+  .small-testimony-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+  
+    justify-items: center;
+  }
+
+  .small-testimony{
+    width: 90%;
+    /* margin: 0 0 20px 0; */
+  }
+
+  .testimony{
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+
+  .testimony > h1{
+    font-size: 2em ;
+  }
+
+  .testimony p{
+    
+    font-size: 0.7em;
+  }
+
+  .testimony-text{
+  width: 90%;
+  height: fit-content;
+  padding: 2rem 0 2em 0;
+  font-size: 1em;
+}
+}
+
+@media (max-width: 575.98px) {
+  .small-testimony-container {
+    grid-template-columns: 1fr 1fr; /* Keep 2 columns */
+    gap: 4px; /* Even smaller gap if you want */
+  }
+  .small-testimony {
+    width: 85%;   /* Make each item smaller to fit */
+    height: 7em;  /* Reduce height if needed */
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: 0.9em;
+  }
+
+  .small-testimony h1 {
+    font-size: 1.2em;
+  }
+  .small-testimony p {
+    font-size: 0.8em;
+  }
+}
+
